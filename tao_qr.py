@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Tao ma QR cho cac kenh cua Rua Xe Long Ut — mau theo thuong hieu tung kenh."""
 import os
 import sys
@@ -14,7 +14,7 @@ os.makedirs(OUT, exist_ok=True)
 MA = {
     "qr-youtube":  ("https://www.youtube.com/@RuaXeLongUt", "#FF0000"),
     "qr-facebook": ("https://www.facebook.com/ruaxelongut", "#1877F2"),
-    "qr-tiktok":   ("https://www.tiktok.com/@user8027023072046", "#111111"),
+    "qr-tiktok":   ("https://www.tiktok.com/@ruaxelongut105", "#111111"),
     "qr-maps":     ("https://maps.google.com/?q=105+T%C3%A2y+Th%E1%BA%A1nh,+P.+T%C3%A2y+Th%E1%BA%A1nh,+TP.HCM", "#188038"),
     "qr-goi":      ("tel:0765333324", "#E32227"),
     "qr-zalo":     ("https://zalo.me/0765333324", "#0068FF"),
