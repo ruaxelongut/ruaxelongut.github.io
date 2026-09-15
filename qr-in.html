@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tờ QR để in — Rửa Xe Long Út</title>
+<style>
+  @page{size:A4 portrait;margin:10mm}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#e9eef5;padding:20px}
+  .to{width:190mm;min-height:277mm;margin:0 auto;background:#fff;border-radius:6px;overflow:hidden;
+      box-shadow:0 6px 24px rgba(0,0,0,.14);display:flex;flex-direction:column}
+  .dau{background:linear-gradient(135deg,#123C8C,#1E7FD4);color:#fff;text-align:center;padding:16mm 10mm 12mm}
+  .dau img{width:34mm;margin:0 auto 6mm;border-radius:6mm;background:#fff;padding:2mm}
+  .dau h1{font-size:12mm;font-weight:900;line-height:1.1;letter-spacing:-.3mm}
+  .dau h1 .v{color:#FFD500}
+  .dau p{margin-top:3mm;font-size:4.4mm;color:#D8E6F6}
+  .bang{background:#FFD500;color:#2A2000;text-align:center;font-weight:900;font-size:5.4mm;padding:4mm}
+  .bang b{background:#E32227;color:#fff;padding:.6mm 3mm;border-radius:2mm}
+  .than{flex:1;padding:10mm 10mm 6mm}
+  .moi{text-align:center;font-size:6mm;font-weight:900;color:#123C8C;margin-bottom:2mm}
+  .moi-p{text-align:center;font-size:4mm;color:#5B6B7C;margin-bottom:8mm}
+  .luoi{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+  .o{border:.5mm solid #E2EAF3;border-radius:4mm;padding:5mm 3mm;text-align:center}
+  .o img{width:100%;max-width:44mm;margin:0 auto}
+  .o .ten{font-weight:900;font-size:5mm;margin-top:3mm}
+  .o .tay{font-size:3.4mm;color:#5B6B7C;margin-top:.5mm}
+  .yt .ten{color:#FF0000}.tt .ten{color:#111}.fb .ten{color:#1877F2}
+  .goi .ten{color:#E32227}.zl .ten{color:#0068FF}.mp .ten{color:#188038}
+  .luoi2{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:7mm}
+  .chan{background:#0E2E6B;color:#fff;text-align:center;padding:7mm 10mm}
+  .chan .dc{font-size:5.4mm;font-weight:900}
+  .chan .sdt{font-size:6.6mm;font-weight:900;color:#FFD500;margin-top:2mm}
+  .chan .gio{font-size:4.2mm;color:#B9CCE4;margin-top:2mm}
+  .inbtn{display:block;max-width:190mm;margin:14px auto 0;padding:14px;background:#123C8C;color:#fff;
+         border:0;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer}
+  @media print{body{background:#fff;padding:0}.to{box-shadow:none;border-radius:0;width:auto;min-height:auto}.inbtn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="to">
+  <div class="dau">
+    <img src="assets/logo.png" alt="Logo Rửa Xe Long Út">
+    <h1>RỬA XE <span class="v">BỌT TUYẾT</span><br>LONG ÚT</h1>
+    <p>Ô tô · Xe máy · Thay nhớt — 105 Tây Thạnh, P. Tây Thạnh, TP.HCM</p>
+  </div>
+
+  <div class="bang">🏍️ TÀI XẾ CÔNG NGHỆ: RỬA XE MÁY CHỈ <b>20.000Đ</b> (9H–15H)</div>
+
+  <div class="than">
+    <div class="moi">📱 QUÉT MÃ — THEO DÕI TIỆM</div>
+    <div class="moi-p">Mỗi ngày tiệm đăng một video xe dơ thành xe sạch. Quét mã để xem trước khi ghé!</div>
+
+    <div class="luoi">
+      <div class="o yt"><img src="assets/qr/qr-youtube.png" alt="QR YouTube"><div class="ten">YouTube</div><div class="tay">@RuaXeLongUt</div></div>
+      <div class="o tt"><img src="assets/qr/qr-tiktok.png" alt="QR TikTok"><div class="ten">TikTok</div><div class="tay">Rửa Xe Long Út</div></div>
+      <div class="o fb"><img src="assets/qr/qr-facebook.png" alt="QR Facebook"><div class="ten">Facebook</div><div class="tay">Trang Rửa Xe Long Út</div></div>
+    </div>
+
+    <div class="luoi2">
+      <div class="o goi"><img src="assets/qr/qr-goi.png" alt="QR gọi điện"><div class="ten">Gọi tiệm</div><div class="tay">0765 333 324</div></div>
+      <div class="o zl"><img src="assets/qr/qr-zalo.png" alt="QR Zalo"><div class="ten">Nhắn Zalo</div><div class="tay">0765 333 324</div></div>
+      <div class="o mp"><img src="assets/qr/qr-maps.png" alt="QR chỉ đường"><div class="ten">Chỉ đường</div><div class="tay">105 Tây Thạnh</div></div>
+    </div>
+  </div>
+
+  <div class="chan">
+    <div class="dc">📍 105 TÂY THẠNH, P. TÂY THẠNH, TP.HCM</div>
+    <div class="sdt">☎ 0765 333 324 — 0353 872 758</div>
+    <div class="gio">🕕 Mở cửa 6h00 – 20h00 mỗi ngày, kể cả lễ</div>
+  </div>
+</div>
+
+<button class="inbtn" onclick="window.print()">🖨️ IN TỜ NÀY (A4)</button>
+
+</body>
+</html>
