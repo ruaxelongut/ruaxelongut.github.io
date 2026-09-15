@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kết nối TikTok — Rửa Xe Long Út</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#0E2E6B;color:#fff;
+       min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+  .hop{background:#fff;color:#123C8C;max-width:560px;width:100%;border-radius:16px;padding:32px 28px;
+       box-shadow:0 12px 40px rgba(0,0,0,.28)}
+  h1{font-size:22px;margin-bottom:6px}
+  p{color:#5B6B7C;font-size:15px;line-height:1.6}
+  .ma{margin-top:18px;background:#F2F6FB;border:1px solid #DCE6F2;border-radius:10px;padding:14px;
+      font-family:Consolas,Menlo,monospace;font-size:13px;word-break:break-all;color:#123C8C}
+  .nut{margin-top:14px;display:inline-block;background:#123C8C;color:#fff;border:0;border-radius:10px;
+       padding:12px 20px;font-size:15px;font-weight:700;cursor:pointer}
+  .loi{color:#E32227;font-weight:700}
+  .nho{margin-top:16px;font-size:13px;color:#8496A8}
+</style>
+</head>
+<body>
+
+<div class="hop">
+  <h1 id="tieu-de">Đang xử lý…</h1>
+  <p id="mo-ta">Vui lòng chờ trong giây lát.</p>
+  <div class="ma" id="o-ma" style="display:none"></div>
+  <button class="nut" id="nut-chep" style="display:none">📋 Sao chép mã</button>
+  <p class="nho">Trang này chỉ dùng để nhận mã cấp quyền TikTok cho tiệm Rửa Xe Long Út.
+     Nếu bạn vào nhầm, quay lại <a href="/">trang chủ</a>.</p>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var ma = q.get('code'), loi = q.get('error');
+  var tieuDe = document.getElementById('tieu-de'),
+      moTa   = document.getElementById('mo-ta'),
+      oMa    = document.getElementById('o-ma'),
+      nut    = document.getElementById('nut-chep');
+
+  if (loi) {
+    tieuDe.textContent = 'Chưa cấp quyền được';
+    tieuDe.className = 'loi';
+    moTa.textContent = 'TikTok báo: ' + loi + (q.get('error_description') ? ' — ' + q.get('error_description') : '');
+    return;
+  }
+  if (!ma) {
+    tieuDe.textContent = 'Không có mã';
+    moTa.textContent = 'Mở lại đường link cấp quyền từ máy rồi bấm Cho phép.';
+    return;
+  }
+
+  tieuDe.textContent = '✅ Đã cấp quyền xong';
+  moTa.textContent = 'Sao chép nguyên đường link trên thanh địa chỉ (hoặc mã bên dưới) gửi lại cho trợ lý để hoàn tất kết nối.';
+  oMa.textContent = location.href;
+  oMa.style.display = 'block';
+  nut.style.display = 'inline-block';
+  nut.onclick = function () {
+    navigator.clipboard.writeText(location.href).then(function () {
+      nut.textContent = '✔ Đã sao chép';
+    });
+  };
+})();
+</script>
+
+</body>
+</html>
