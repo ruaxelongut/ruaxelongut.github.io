@@ -64,14 +64,20 @@
   .video-card{background:#000;border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(18,60,140,.16)}
   .video-card video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
   .video-card .cap{background:#fff;padding:12px 16px;font-weight:700;color:var(--xanh);font-size:15px}
-  .video-card .yt{position:relative;aspect-ratio:9/16;background:#000;cursor:pointer}
-  .video-card .yt img{width:100%;height:100%;object-fit:cover;opacity:.88}
-  .video-card .yt .play{position:absolute;inset:0;margin:auto;width:74px;height:52px;background:#FF0000;
-       border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.4);transition:transform .15s}
-  .video-card .yt .play::after{content:"";position:absolute;inset:0;margin:auto;width:0;height:0;
-       border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff}
-  .video-card .yt:hover .play{transform:scale(1.1)}
-  .video-card iframe{width:100%;aspect-ratio:9/16;border:0;display:block}
+  .video-card.kenh{background:#fff;display:flex;flex-direction:column}
+  .video-card .nhan{display:flex;align-items:center;gap:8px;padding:11px 15px;font-weight:800;font-size:15px;color:var(--chu)}
+  .cham{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .cham.yt{background:#FF0000}.cham.tt{background:#111}.cham.fb{background:#1877F2}
+  .video-card .o-video{position:relative;aspect-ratio:9/16;background:#0b0b0b}
+  .video-card .o-video iframe{width:100%;height:100%;border:0;display:block}
+  .video-card .o-video video{width:100%;height:100%;object-fit:cover}
+  .video-card .cho{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+       color:#8899aa;font-size:14px;text-align:center;padding:16px}
+  .video-card .cap{background:#fff;padding:11px 15px;color:var(--xam);font-size:14px;font-weight:600;flex:1}
+  .di-kenh{display:block;text-align:center;padding:12px 0;font-weight:800;font-size:15px;color:#fff;text-decoration:none}
+  .di-kenh.k-yt{background:#FF0000}.di-kenh.k-tt{background:#111}.di-kenh.k-fb{background:#1877F2}
+  .video-card .moi-bam{position:absolute;inset:0;margin:auto;width:74px;height:52px;background:#FF0000;
+       border-radius:14px;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.4)}
 
   /* ANH */
   .anh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}
@@ -244,20 +250,29 @@
   <div class="wrap">
     <h2 class="tieude">Xem tiệm làm việc</h2>
     <p class="mota">Video quay thật tại tiệm — không dàn dựng.</p>
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="yt" data-id="_zOlYlJdZ-I" role="button" tabindex="0"
-             aria-label="Phát video giới thiệu tiệm Rửa Xe Long Út">
-          <img src="assets/poster-1.jpg" alt="Tiệm rửa xe Long Út tại 105 Tây Thạnh">
-          <span class="play"></span>
-        </div>
-        <div class="cap">🫧 Giới thiệu tiệm — rửa bọt tuyết ô tô &amp; xe máy</div>
+    <div class="video-grid" id="khung-video">
+      <div class="video-card kenh" data-kenh="youtube">
+        <div class="nhan"><span class="cham yt"></span>YouTube</div>
+        <div class="o-video"><div class="cho">Đang tải video…</div></div>
+        <div class="cap">—</div>
+        <a class="di-kenh k-yt" href="https://www.youtube.com/@RuaXeLongUt?sub_confirmation=1" target="_blank" rel="noopener">▶ Đăng ký kênh</a>
       </div>
-      <div class="video-card">
-        <video src="assets/do-thanh-sach.mp4" poster="assets/poster-2.jpg" controls preload="none" playsinline></video>
-        <div class="cap">✨ Giải cứu xe — từ dơ thành sạch bóng</div>
+      <div class="video-card kenh" data-kenh="tiktok">
+        <div class="nhan"><span class="cham tt"></span>TikTok</div>
+        <div class="o-video"><div class="cho">Đang tải video…</div></div>
+        <div class="cap">—</div>
+        <a class="di-kenh k-tt" href="https://www.tiktok.com/@user8027023072046" target="_blank" rel="noopener">♪ Theo dõi TikTok</a>
+      </div>
+      <div class="video-card kenh" data-kenh="facebook">
+        <div class="nhan"><span class="cham fb"></span>Facebook</div>
+        <div class="o-video"><div class="cho">Đang tải video…</div></div>
+        <div class="cap">—</div>
+        <a class="di-kenh k-fb" href="https://www.facebook.com/profile.php?id=61594041613934" target="_blank" rel="noopener">👍 Thích Trang</a>
       </div>
     </div>
+    <p style="text-align:center;margin-top:16px;color:var(--xam);font-size:14px">
+      🔄 Mỗi lần mở lại trang sẽ hiện một video khác của tiệm.
+    </p>
     <p style="text-align:center;margin-top:20px">
       <a href="https://www.youtube.com/@RuaXeLongUt?sub_confirmation=1" target="_blank" rel="noopener"
          style="display:inline-block;background:#FF0000;color:#fff;padding:12px 24px;border-radius:11px;font-weight:800;text-decoration:none">
@@ -388,19 +403,55 @@
 <a class="goi-noi" href="tel:0765333324">📞 Gọi tiệm</a>
 
 <script>
-// Bam vao anh moi tai trinh phat YouTube — trang van nhe, luot xem van tinh cho kenh
-document.querySelectorAll('.yt').forEach(function (o) {
-  function phat() {
-    var f = document.createElement('iframe');
-    f.src = 'https://www.youtube.com/embed/' + o.dataset.id + '?autoplay=1&rel=0';
-    f.title = 'Video Rửa Xe Long Út';
-    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-    f.allowFullscreen = true;
-    o.replaceWith(f);
+/* 3 khung video — moi kenh 1 video, moi lan tai trang boc ngau nhien 1 video khac.
+   Danh sach video nam trong videos.json; dang video moi chi can them vao file do. */
+(function () {
+  var DUPHONG = {                     // dung khi kenh chua co video nao
+    youtube:  { file: 'assets/gioi-thieu-tiem.mp4', poster: 'assets/poster-1.jpg', tieu_de: 'Giới thiệu tiệm Long Út' },
+    tiktok:   { file: 'assets/do-thanh-sach.mp4',   poster: 'assets/poster-2.jpg', tieu_de: 'Giải cứu xe — dơ thành sạch bóng' },
+    facebook: { file: 'assets/do-thanh-sach.mp4',   poster: 'assets/poster-2.jpg', tieu_de: 'Giải cứu xe — dơ thành sạch bóng' }
+  };
+
+  function boc(ds) { return ds[Math.floor(Math.random() * ds.length)]; }
+
+  function khung(kenh, v) {
+    if (kenh === 'youtube')
+      return '<iframe src="https://www.youtube.com/embed/' + v.id +
+             '?rel=0&playsinline=1" title="Video Rửa Xe Long Út trên YouTube" loading="lazy" ' +
+             'allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    if (kenh === 'tiktok')
+      return '<iframe src="https://www.tiktok.com/embed/v2/' + v.id +
+             '" title="Video Rửa Xe Long Út trên TikTok" loading="lazy" allowfullscreen></iframe>';
+    return '<iframe src="https://www.facebook.com/plugins/video.php?href=' +
+           encodeURIComponent('https://www.facebook.com/reel/' + v.id + '/') +
+           '&show_text=false&autoplay=false" title="Video Rửa Xe Long Út trên Facebook" loading="lazy" allowfullscreen></iframe>';
   }
-  o.addEventListener('click', phat);
-  o.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); phat(); } });
-});
+
+  function duphong(kenh) {
+    var d = DUPHONG[kenh];
+    return { html: '<video src="' + d.file + '" poster="' + d.poster + '" controls preload="none" playsinline></video>',
+             cap: d.tieu_de + ' · (kênh này chưa có video, đang chiếu bản của tiệm)' };
+  }
+
+  fetch('videos.json?t=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .catch(function () { return { youtube: [], tiktok: [], facebook: [] }; })
+    .then(function (kho) {
+      document.querySelectorAll('#khung-video .kenh').forEach(function (o) {
+        var kenh = o.dataset.kenh, ds = (kho && kho[kenh]) || [];
+        var oVideo = o.querySelector('.o-video'), oCap = o.querySelector('.cap');
+        if (ds.length) {
+          var v = boc(ds);
+          oVideo.innerHTML = khung(kenh, v);
+          oCap.textContent = v.tieu_de || '';
+        } else {
+          var d = duphong(kenh);
+          oVideo.innerHTML = d.html;
+          oCap.textContent = d.cap;
+        }
+      });
+    });
+})();
 </script>
 
 <script type="application/ld+json">
