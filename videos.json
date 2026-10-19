@@ -2,6 +2,10 @@
   "_ghi_chu": "Danh sach video cua 3 kenh. Moi lan tai trang, web boc ngau nhien 1 video moi kenh. Dang them video moi thi them 1 dong vao dung kenh roi git push — KHONG can sua index.html.",
   "youtube": [
     {
+      "id": "n-2HC4A50gE",
+      "tieu_de": "Mỗi chiếc xe là một khoảnh khắc khác nhau"
+    },
+    {
       "id": "HtlKTWhtpBI",
       "tieu_de": "Khăn khô đi tới đâu, thợ soi kỹ tới đó"
     },
@@ -227,6 +231,10 @@
     }
   ],
   "facebook": [
+    {
+      "id": "122124199911468053",
+      "tieu_de": "Mỗi chiếc xe là một khoảnh khắc khác nhau"
+    },
     {
       "id": "122124199647468053",
       "tieu_de": "Khăn khô đi tới đâu, thợ soi kỹ tới đó"
