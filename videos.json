@@ -2,6 +2,26 @@
   "_ghi_chu": "Danh sach video cua 3 kenh. Moi lan tai trang, web boc ngau nhien 1 video moi kenh. Dang them video moi thi them 1 dong vao dung kenh roi git push — KHONG can sua index.html.",
   "youtube": [
     {
+      "id": "hCdcnG6qBzA",
+      "tieu_de": "Đố vui âm thanh ở Long Út"
+    },
+    {
+      "id": "_fwxLptjUtI",
+      "tieu_de": "Tây Thạnh, ghé tiệm lúc nào?"
+    },
+    {
+      "id": "uRAUlwUKK5w",
+      "tieu_de": "Nhìn tay thợ, đoán góc tiệm"
+    },
+    {
+      "id": "7e8S1by_99c",
+      "tieu_de": "Bọt tuyết nhìn gần hay nhìn xa?"
+    },
+    {
+      "id": "2qdHx_Yzr3U",
+      "tieu_de": "Một góc máy, nhiều chiếc xe"
+    },
+    {
       "id": "n-2HC4A50gE",
       "tieu_de": "Mỗi chiếc xe là một khoảnh khắc khác nhau"
     },
@@ -232,23 +252,43 @@
   ],
   "facebook": [
     {
-      "id": "122124199911468053",
+      "id": "122124407823468053",
+      "tieu_de": "Đố vui âm thanh ở Long Út"
+    },
+    {
+      "id": "122124407727468053",
+      "tieu_de": "Tây Thạnh, ghé tiệm lúc nào?"
+    },
+    {
+      "id": "122124407643468053",
+      "tieu_de": "Nhìn tay thợ, đoán góc tiệm"
+    },
+    {
+      "id": "122124407487468053",
+      "tieu_de": "Bọt tuyết nhìn gần hay nhìn xa?"
+    },
+    {
+      "id": "122124407385468053",
+      "tieu_de": "Một góc máy, nhiều chiếc xe"
+    },
+    {
+      "id": "2251298872108357",
       "tieu_de": "Mỗi chiếc xe là một khoảnh khắc khác nhau"
     },
     {
-      "id": "122124199647468053",
+      "id": "2689495828174827",
       "tieu_de": "Khăn khô đi tới đâu, thợ soi kỹ tới đó"
     },
     {
-      "id": "122124199443468053",
+      "id": "2931289360564272",
       "tieu_de": "Một vòng quanh tiệm Long Út"
     },
     {
-      "id": "122124199263468053",
+      "id": "1088202640655774",
       "tieu_de": "Bọt tuyết phủ từng mảng, từ xe trắng tới xe tối màu"
     },
     {
-      "id": "122124199071468053",
+      "id": "1767013714563642",
       "tieu_de": "Bánh xe, gầm xe, rồi tới từng vùng thân xe"
     },
     {
