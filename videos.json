@@ -2,6 +2,10 @@
   "_ghi_chu": "Danh sach video cua 3 kenh. Moi lan tai trang, web boc ngau nhien 1 video moi kenh. Dang them video moi thi them 1 dong vao dung kenh roi git push — KHONG can sua index.html.",
   "youtube": [
     {
+      "id": "SZC4F9gHJt4",
+      "tieu_de": "Một vòng quanh tiệm Long Út"
+    },
+    {
       "id": "t4-a2ojfzkI",
       "tieu_de": "Bọt tuyết phủ từng mảng, từ xe trắng tới xe tối màu"
     },
@@ -219,6 +223,10 @@
     }
   ],
   "facebook": [
+    {
+      "id": "122124199443468053",
+      "tieu_de": "Một vòng quanh tiệm Long Út"
+    },
     {
       "id": "122124199263468053",
       "tieu_de": "Bọt tuyết phủ từng mảng, từ xe trắng tới xe tối màu"
