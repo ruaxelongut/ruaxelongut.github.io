@@ -2,6 +2,10 @@
   "_ghi_chu": "Danh sach video cua 3 kenh. Moi lan tai trang, web boc ngau nhien 1 video moi kenh. Dang them video moi thi them 1 dong vao dung kenh roi git push — KHONG can sua index.html.",
   "youtube": [
     {
+      "id": "FgZFfF74AXg",
+      "tieu_de": "Nhìn lại chiếc xe từ xa đến gần — bản có giọng"
+    },
+    {
       "id": "A8wp7K_WIas",
       "tieu_de": "Rửa xe đủ ba bước: nước, bọt, khăn khô — bản có giọng"
     },
@@ -291,6 +295,10 @@
     }
   ],
   "facebook": [
+    {
+      "id": "122130077871468053",
+      "tieu_de": "Nhìn lại chiếc xe từ xa đến gần — bản có giọng"
+    },
     {
       "id": "122129732775468053",
       "tieu_de": "Rửa xe đủ ba bước: nước, bọt, khăn khô — bản có giọng"
